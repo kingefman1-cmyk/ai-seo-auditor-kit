@@ -1,3 +1,5 @@
+[![Powered by Caelara Labs](https://benchmarks.caelaralabs.com/verify/powered-by.svg)](https://caelaralabs.com)
+
 # AI Search Readiness Auditor (white-label starter)
 
 A small Cloudflare Pages site that audits any public website for AI search readiness (`/llms.txt`, AI crawler access, structured data) and domain trust (SPF and DMARC, security headers, certificates). Put your own name on it and run it for clients, or as the front end of your own paid service.
