@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI Search Readiness Auditor</title>
+<meta name="description" content="Check whether a website is ready for AI search: llms.txt, AI crawler access, structured data, and domain trust.">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header class="top"><div class="wrap"><strong id="brand">AI Search Readiness Auditor</strong></div></header>
+<main class="wrap">
+  <section class="hero">
+    <h1>Is your site ready for AI search?</h1>
+    <p class="sub">Checks <code>/llms.txt</code>, AI crawler access in robots.txt, structured data, SPF and DMARC, security headers and certificates. Results come from public requests to your site.</p>
+    <form id="f" class="row" autocomplete="off">
+      <label class="sr" for="url">Website address</label>
+      <input id="url" name="url" type="text" inputmode="url" placeholder="https://example.com" required maxlength="2048">
+      <button id="go" type="submit">Run audit</button>
+    </form>
+    <p id="status" class="status" role="status"></p>
+  </section>
+
+  <section id="out" hidden>
+    <div class="grid">
+      <div class="card"><h2>AI search readiness</h2><div id="geo"></div></div>
+      <div class="card"><h2>Domain trust</h2><div id="trust"></div></div>
+    </div>
+    <div class="card"><h2>What to fix first</h2><ul id="recs"></ul></div>
+    <div class="card">
+      <h2>Embed a live badge</h2>
+      <p class="muted">Show the result on your own site or README. The badge updates itself and links to Caelara Labs.</p>
+      <div class="row"><label class="sr" for="bd">Domain</label><input id="bd" type="text" placeholder="example.com"><select id="bk" aria-label="Badge"><option value="ai-ready">AI Ready</option><option value="domain-trust">Domain Trust</option></select></div>
+      <p><img id="bimg" alt="Badge preview" height="20"></p>
+      <label for="md">Markdown</label><textarea id="md" readonly rows="2"></textarea>
+      <label for="ht">HTML</label><textarea id="ht" readonly rows="3"></textarea>
+    </div>
+  </section>
+</main>
+<footer class="wrap muted foot">Data by <a href="https://caelaralabs.com" rel="noopener">Caelara Labs</a>. Heuristic checks: a clean result is not a guarantee.</footer>
+<script src="/app.js" type="module"></script>
+</body>
+</html>
